@@ -8,7 +8,7 @@ export default function Dice(props) {
 
     return (
         <div
-            onClick={() => props.freeze(props.id)}
+            onClick={() => props.toggle(props.id)}
             className="oneDice"
             style={style}
         >

@@ -16,7 +16,7 @@ function App() {
     const allSameValue = dice.every(die => die.value === firstValue)
     if (allHeld && allSameValue) {
       setTenzies(true);
-      console.log("You Won");
+      // console.log("You Won");
     }
   }, [dice])
 
@@ -35,7 +35,7 @@ function App() {
     return newDice;
   }
 
-  function freeze(diceId) {
+  function toggle(diceId) {
     setDice(prevDice => prevDice.map(die => {
       return die.id === diceId ? { ...die, isHeld: !die.isHeld } : die
     }))
@@ -46,7 +46,7 @@ function App() {
       id={die.id}
       key={die.id}
       value={die.value}
-      freeze={freeze}
+      toggle={toggle}
       isHeld={die.isHeld}
     />
   )
