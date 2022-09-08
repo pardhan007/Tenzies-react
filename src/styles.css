@@ -74,12 +74,13 @@ body {
   border-radius: 10px;
 }
 
-.oneDice h1 {
+.oneDice p {
   cursor: pointer;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.8rem;
 }
 
 .btnDiv {
@@ -119,11 +120,13 @@ body {
 
   .header p {
     width: 90%;
-
   }
 
   .oneDice {
     width: 50px;
     height: 50px;
+  }
+  .oneDice p {
+    font-size: 1.5rem;
   }
 }

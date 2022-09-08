@@ -12,7 +12,7 @@ export default function Dice(props) {
             className="oneDice"
             style={style}
         >
-            <h1>{props.value}</h1>
+            <p>{props.value}</p>
         </div>
     )
 }
