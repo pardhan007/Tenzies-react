@@ -1,14 +1,17 @@
 import React from "react";
 import Header from "./components/Header";
 import Dice from "./components/Dice";
+import Navbar from "./components/Navbar";
 import { nanoid } from 'nanoid'
 import Confetti from 'react-confetti'
+
 
 function App() {
 
   const [dice, setDice] = React.useState(allNewDice());
   const [tenzies, setTenzies] = React.useState(false);
   const [count, setCount] = React.useState(0);
+  const [nums, setNums] = React.useState(false);
 
   React.useEffect(() => {
     const allHeld = dice.every(die => die.isHeld)
@@ -48,6 +51,7 @@ function App() {
       value={die.value}
       toggle={toggle}
       isHeld={die.isHeld}
+      nums={nums}
     />
   )
 
@@ -65,9 +69,15 @@ function App() {
     }
   }
 
+
+  function toggleNumDots() {
+    setNums(prevState => !prevState)
+  }
+
   return (
     <div className="container">
       {tenzies && <Confetti />}
+      <Navbar nums={nums} toggleNumDots={toggleNumDots} />
       <Header count={count} />
       <div className="gridBox">
         {diceElements}
