@@ -227,9 +227,9 @@ nav.nums .toggler--slider {
 .rollBtn {
   cursor: pointer;
   color: #F5F5F5;
-  height: 45px;
-  width: 140px;
-  font-size: 1.25rem;
+  height: 40px;
+  width: 120px;
+  font-size: 1.1rem;
   font-weight: bolder;
   border: none;
   border-radius: 5px;
